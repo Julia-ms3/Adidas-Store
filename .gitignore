@@ -80,6 +80,10 @@ ENV/
 .idea/**/libraries 
 *.iws /out/ 
 
+# File IDE
+.idea/
+.vscode/
+
 # Sublime Text
 *.tmlanguage.cache 
 *.tmPreferences.cache 
