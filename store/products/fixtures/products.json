@@ -1,0 +1,38 @@
+[
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Adicolor Backpack",
+      "price": "35",
+      "quantity": 10,
+      "description": "There's something quite satisfying about a classic backpack. It's your daily companion for commuting, heading to the gym and adventuring on the weekend.",
+      "img": "product_images/Adicolor_Backpack.jpg",
+      "category": 4
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Adicolor Denim Track Top",
+      "price": "100",
+      "quantity": 5,
+      "description": "This adidas track top moves easily from workout to hangout. Made from durable denim, it has a laid-back vibe perfect for the weekends. Zip pockets give you a place to stash your phone and keys when you head out the door.",
+      "img": "product_images/Adicolor_Denim_Track_Top.jpeg",
+      "category": 1
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "name": "CAMPUS 00S  SHOES",
+      "price": "70",
+      "quantity": 2,
+      "description": "A classic gets a contemporary update. These shoes for kids bring the iconic '80s design of adidas Campus 00s sneakers into modern times with refreshed proportions and a minimalist aesthetic.",
+      "img": "product_images/CAMPUS_00S.jpeg",
+      "category": 3
+    }
+  }
+]
