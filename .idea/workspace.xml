@@ -7,10 +7,9 @@
     <list default="true" id="21095d70-6dd7-4598-952d-9400b6a71024" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/store/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/products/templates/products/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/templates/products/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/products/templates/products/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/templates/products/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/products/templates/products/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/templates/products/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/store/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -49,6 +49,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/store/products/fixtures" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.manage">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="djangoProg" />
