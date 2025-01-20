@@ -5,13 +5,15 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-7">
+                {% if  form.errors %}
                 <div class="alert alert-warning alert-dismissible fade show" role="alert"
                      style="margin-top: 50px;">
-                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    {{ form.errors }}
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                {% endif %}
                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Sign up</h3>
                     </div>
@@ -22,13 +24,15 @@
                             <div class="form-row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="small mb-1" for="{{ form.first_name.id_for_label }}">First name</label>
+                                        <label class="small mb-1" for="{{ form.first_name.id_for_label }}">First
+                                            name</label>
                                         {{ form.first_name }}
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="small mb-1" for="{{ form.last_name.id_for_label }}">Last name</label>
+                                        <label class="small mb-1" for="{{ form.last_name.id_for_label }}">Last
+                                            name</label>
                                         {{ form.last_name }}
                                     </div>
                                 </div>
@@ -46,13 +50,15 @@
                             <div class="form-row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="small mb-1" for="{{ form.passowrd1.id_for_label }}">Password</label>
+                                        <label class="small mb-1"
+                                               for="{{ form.passowrd1.id_for_label }}">Password</label>
                                         {{ form.password1}}
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="small mb-1" for="{{ form.password2.id_for_label }}">Confirm password</label>
+                                        <label class="small mb-1" for="{{ form.password2.id_for_label }}">Confirm
+                                            password</label>
                                         {{ form.password2}}
 
                                     </div>
