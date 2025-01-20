@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="21095d70-6dd7-4598-952d-9400b6a71024" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/store/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/templates/users/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "Python.main.executor": "Run",
     "Python.manage.executor": "Debug",
-    "Python.run_server.executor": "Debug",
+    "Python.run_server.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/juliamatviychuk/Documents/python/djangoProg",
@@ -150,16 +149,5 @@
       <updated>1736782055913</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/store/users/views.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
