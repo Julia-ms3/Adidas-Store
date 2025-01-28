@@ -1,66 +1,43 @@
 from django.shortcuts import render, HttpResponseRedirect
 from products.models import Basket
-from users.forms import UserLoginForm, UserRegistrationForm, UserProfileForm
-from django.contrib import auth, messages
-from django.urls import reverse
+from users.forms import UserLoginForm, UserRegistrationForm, UserProfileForm, User
+from django.views.generic.edit import CreateView
+from django.urls import reverse, reverse_lazy
+from django.contrib.auth.views import LoginView
+from mixins.views import TitleMixin
+from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib import auth
+from django.views.generic import UpdateView
 
 
 # Create your views here.
 
-def login(request):
-    if request.method == 'POST':
-        form = UserLoginForm(data=request.POST)
-        if form.is_valid():
-            username = request.POST['username']
-            password = request.POST['password']
-            user = auth.authenticate(username=username, password=password)
-            if user:
-                auth.login(request, user)
-                return HttpResponseRedirect(reverse('index'))
-        else:
-            print(form.errors)
-    else:
-        form = UserLoginForm()
-    context = {
-        'form': form
-    }
-    return render(request, 'users/login.html', context)
+class UserRegistrationView(SuccessMessageMixin, TitleMixin, CreateView):
+    model = User
+    form_class = UserRegistrationForm
+    template_name = 'users/register.html'
+    success_url = reverse_lazy('users:login')
+    success_message = 'You have successfully registered'
+    title = 'Registration'
 
 
-def register(request):
-    if request.method == 'POST':
-        form = UserRegistrationForm(data=request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'You have successfully registered')
-            return HttpResponseRedirect(reverse('users:login'))
-
-    else:
-        form = UserRegistrationForm()
-    context = {
-        'form': form
-    }
-    return render(request, 'users/register.html', context)
+class UserLoginView(TitleMixin, LoginView):
+    form_class = UserLoginForm
+    template_name = 'users/login.html'
+    title = 'Login'
 
 
-def profile(request):
-    if request.method == "POST":
-        form = UserProfileForm(instance=request.user, data=request.POST)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect(reverse('users:profile'))
-        else:
-            print(form.errors)
-    else:
-        form = UserProfileForm(instance=request.user)
+class UserProfileView(TitleMixin, UpdateView):
+    model = User
+    template_name = 'users/profile.html'
+    success_url = reverse_lazy('users:profile')
+    form_class = UserProfileForm
+    title = 'Profile'
 
-    context = {
-        'form': form,
-        'title': 'Profile',
-        'baskets': Basket.objects.filter(user=request.user)
-
-    }
-    return render(request, 'users/profile.html', context)
+    def get_context_data(self, **kwargs):
+        context = super(UserProfileView, self).get_context_data(**kwargs)
+        context['baskets'] = Basket.objects.filter(user=self.request.user)
+        return context
 
 
 def logout(request):

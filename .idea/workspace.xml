@@ -7,9 +7,16 @@
     <list default="true" id="21095d70-6dd7-4598-952d-9400b6a71024" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/store/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/media/product_images/Adicolor_Backpack.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/media/product_images/Adicolor_Denim_Track_Top.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/media/product_images/CAMPUS_00S.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/products/templates/products/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/templates/products/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/products/templates/products/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/templates/products/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/store/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/store/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/store/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/users/templates/users/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/templates/users/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>

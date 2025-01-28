@@ -10,9 +10,9 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-7">
-            <h4 class="mt-3 mb-3">Profile</h4>
+            <h4 class="mt-3 mb-3">{{ title }}</h4>
 
-            <form action="{% url 'users:profile' %}" method="post">
+            <form action="{% url 'users:profile' user.id %}" method="post">
                 {% csrf_token %}
                 <div class="form-row">
                     <div class="col-lg-6">
