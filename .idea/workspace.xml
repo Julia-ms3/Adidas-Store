@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21095d70-6dd7-4598-952d-9400b6a71024" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store/users/templates/users/email_verification.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/store/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/products/templates/products/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/templates/products/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/products/templates/products/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/templates/products/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/store/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/store/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/store/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/users/templates/users/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/templates/users/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/views.py" afterDir="false" />
     </list>
@@ -50,10 +49,11 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.manage.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.run_server.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_server.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.runserver.executor&quot;: &quot;Debug&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/juliamatviychuk/Documents/python/djangoProg&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/juliamatviychuk/Documents/python/AdidasStore&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -62,7 +62,7 @@
       <recent name="$PROJECT_DIR$/store/products/fixtures" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run_server">
+  <component name="RunManager" selected="Python.runserver">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="djangoProg" />
       <option name="ENV_FILES" value="" />
@@ -107,8 +107,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_server" type="PythonConfigurationType" factoryName="Python">
-      <module name="djangoProg" />
+    <configuration name="runserver" type="PythonConfigurationType" factoryName="Python">
+      <module name="AdidasStore" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -116,7 +116,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.13 (djangoProg)" />
+      <option name="SDK_NAME" value="Python 3.13 (AdidasStore)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -131,8 +131,8 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.runserver" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.run_server" />
       <item itemvalue="Python.manage" />
     </list>
     <recent_temporary>
@@ -158,5 +158,8 @@
       <updated>1736782055913</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
 </project>

@@ -4,10 +4,13 @@ from users.forms import UserLoginForm, UserRegistrationForm, UserProfileForm, Us
 from django.views.generic.edit import CreateView
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.views import LoginView
+from django.views.generic.base import TemplateView
 from mixins.views import TitleMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import auth
 from django.views.generic import UpdateView
+from users.models import EmailVerification
+
 
 
 # Create your views here.
@@ -43,3 +46,23 @@ class UserProfileView(TitleMixin, UpdateView):
 def logout(request):
     auth.logout(request)
     return HttpResponseRedirect(reverse('index'))
+
+class EmailVerificationView(TitleMixin, TemplateView):
+    title = 'Store - Email Confirmation'
+    template_name = 'users/email_verification.html'
+
+    def get(self, request, *args, **kwargs):
+        code = kwargs['code']
+        user = User.objects.get(email=kwargs['email'])
+        email_verification = EmailVerification.objects.filter(user=user, code=code)
+        if email_verification.exists() and not email_verification.last().is_expired():
+            user.is_verified_email=True
+            user.save()
+            return super(EmailVerificationView, self).get(request, *args, **kwargs)
+
+        else:
+            return HttpResponseRedirect(reverse('index'))
+
+
+
+
