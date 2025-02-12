@@ -1,9 +1,10 @@
-from django.shortcuts import  HttpResponseRedirect
-from mixins.views import TitleMixin
-from products.models import Category, Product, Basket
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import HttpResponseRedirect
 from django.views.generic.base import TemplateView
 from django.views.generic.list import ListView
+
+from mixins.views import TitleMixin
+from products.models import Basket, Category, Product
 
 
 class IndexView(TemplateView):
@@ -26,6 +27,7 @@ class ProductsListView(TitleMixin, ListView):
         context = super(ProductsListView, self).get_context_data(**kwargs)
         context['categories'] = Category.objects.all()
         return context
+
 
 @login_required
 def basket_add(request, product_id):

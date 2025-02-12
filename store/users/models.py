@@ -1,10 +1,10 @@
-from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.core.mail import send_mail
+from django.db import models
 from django.urls import reverse
-from store.settings import MAIN_PATH
 from django.utils.timezone import now
-from store.settings import EMAIL_HOST_USER
+
+from store.settings import EMAIL_HOST_USER, MAIN_PATH
 
 
 # Create your models here.
