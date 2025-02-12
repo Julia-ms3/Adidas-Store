@@ -12,7 +12,6 @@ from django.views.generic import UpdateView
 from users.models import EmailVerification
 
 
-
 # Create your views here.
 
 class UserRegistrationView(SuccessMessageMixin, TitleMixin, CreateView):
@@ -37,15 +36,11 @@ class UserProfileView(TitleMixin, UpdateView):
     form_class = UserProfileForm
     title = 'Profile'
 
-    def get_context_data(self, **kwargs):
-        context = super(UserProfileView, self).get_context_data(**kwargs)
-        context['baskets'] = Basket.objects.filter(user=self.request.user)
-        return context
-
 
 def logout(request):
     auth.logout(request)
     return HttpResponseRedirect(reverse('index'))
+
 
 class EmailVerificationView(TitleMixin, TemplateView):
     title = 'Store - Email Confirmation'
@@ -56,13 +51,9 @@ class EmailVerificationView(TitleMixin, TemplateView):
         user = User.objects.get(email=kwargs['email'])
         email_verification = EmailVerification.objects.filter(user=user, code=code)
         if email_verification.exists() and not email_verification.last().is_expired():
-            user.is_verified_email=True
+            user.is_verified_email = True
             user.save()
             return super(EmailVerificationView, self).get(request, *args, **kwargs)
 
         else:
             return HttpResponseRedirect(reverse('index'))
-
-
-
-
