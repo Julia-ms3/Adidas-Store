@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21095d70-6dd7-4598-952d-9400b6a71024" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/users/templates/users/email_verification.html" afterDir="false" />
+    <list default="true" id="21095d70-6dd7-4598-952d-9400b6a71024" name="Changes" comment="draft">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/store/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/store/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/store/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/store/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/templates/users/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +44,7 @@
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.manage.executor&quot;: &quot;Debug&quot;,
     &quot;Python.run_server.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.runserver.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.runserver.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/juliamatviychuk/Documents/python/AdidasStore&quot;,
