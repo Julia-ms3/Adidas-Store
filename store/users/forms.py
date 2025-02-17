@@ -19,6 +19,10 @@ class UserLoginForm(AuthenticationForm):
         'class': 'form-control py-4',
         'placeholder': 'enter password'
     }))
+    error_messages = {
+        "invalid_login":
+            "Please enter a correct username and password"
+    }
 
     class Meta:
         model = User

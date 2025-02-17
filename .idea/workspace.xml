@@ -6,15 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="21095d70-6dd7-4598-952d-9400b6a71024" name="Changes" comment="draft">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/products/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/store/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/store/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/store/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/users/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/templates/users/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/users/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,25 +46,154 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.manage.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.run_server.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.runserver.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/juliamatviychuk/Documents/python/AdidasStore&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django tests.Test: products.tests.IndexViewTest.test_view.executor": "Debug",
+    "Django tests.Test: products.tests.ProductsListViewTest.executor": "Debug",
+    "Django tests.Test: products.tests.ProductsListViewTest.test_products_list.executor": "Run",
+    "Django tests.Test: products.tests.ProductsListViewTest.test_products_list_categories.executor": "Run",
+    "Django tests.Test: users.tests.UserLoginTest.executor": "Run",
+    "Django tests.Test: users.tests.UserLoginTest.test_invalid_data.executor": "Run",
+    "Django tests.Test: users.tests.UserLoginTest.test_login.executor": "Run",
+    "Django tests.Test: users.tests.UserLoginTest.test_login_success.executor": "Run",
+    "Django tests.Test: users.tests.UserRegistrationTest.executor": "Run",
+    "Django tests.Test: users.tests.UserRegistrationTest.test_register.executor": "Run",
+    "Django tests.Test: users.tests.UserRegistrationTest.test_register_post.executor": "Run",
+    "Python tests.Python tests for tests.IndexViewTest.executor": "Run",
+    "Python tests.Python tests for tests.IndexViewTest.test_view.executor": "Run",
+    "Python tests.Python tests for tests.ProductsListViewTest.executor": "Debug",
+    "Python tests.Python tests for tests.ProductsListViewTest.test_products_list.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.manage.executor": "Debug",
+    "Python.run_server.executor": "Debug",
+    "Python.runserver.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/juliamatviychuk/Documents/python/AdidasStore",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.intellij.python.django.customization.DjangoModulesConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/store/products/fixtures" />
     </key>
   </component>
   <component name="RunManager" selected="Python.runserver">
+    <configuration name="Test: users.tests.UserLoginTest" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="AdidasStore" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="users.tests.UserLoginTest" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: users.tests.UserLoginTest.test_invalid_data" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="AdidasStore" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="users.tests.UserLoginTest.test_invalid_data" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: users.tests.UserLoginTest.test_login" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="AdidasStore" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="users.tests.UserLoginTest.test_login" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: users.tests.UserLoginTest.test_login_success" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="AdidasStore" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="users.tests.UserLoginTest.test_login_success" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: users.tests.UserRegistrationTest.test_register_post" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="AdidasStore" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="users.tests.UserRegistrationTest.test_register_post" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="djangoProg" />
       <option name="ENV_FILES" value="" />
@@ -64,35 +201,15 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="store.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="djangoProg" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/store" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/store/manage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -108,6 +225,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="store.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="SDK_NAME" value="Python 3.13 (AdidasStore)" />
@@ -115,6 +233,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/store/manage.py" />
       <option name="PARAMETERS" value="runserver" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -125,20 +244,29 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Django tests.Test: users.tests.UserLoginTest" />
+      <item itemvalue="Django tests.Test: users.tests.UserLoginTest.test_invalid_data" />
+      <item itemvalue="Django tests.Test: users.tests.UserLoginTest.test_login" />
+      <item itemvalue="Django tests.Test: users.tests.UserLoginTest.test_login_success" />
+      <item itemvalue="Django tests.Test: users.tests.UserRegistrationTest.test_register_post" />
       <item itemvalue="Python.runserver" />
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.manage" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.manage" />
+        <item itemvalue="Django tests.Test: users.tests.UserLoginTest" />
+        <item itemvalue="Django tests.Test: users.tests.UserLoginTest.test_invalid_data" />
+        <item itemvalue="Django tests.Test: users.tests.UserLoginTest.test_login_success" />
+        <item itemvalue="Django tests.Test: users.tests.UserLoginTest.test_login" />
+        <item itemvalue="Django tests.Test: users.tests.UserRegistrationTest.test_register_post" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PY-243.23654.177" />
+        <option value="bundled-python-sdk-91d3a02ef49d-43b77aa2d136-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.23654.177" />
       </set>
     </attachedChunks>
   </component>
@@ -150,10 +278,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1736782055913</updated>
+      <workItem from="1739515458040" duration="9734000" />
+      <workItem from="1739606918295" duration="1523000" />
+      <workItem from="1739715732476" duration="352000" />
+      <workItem from="1739726631059" duration="1360000" />
+      <workItem from="1739774991033" duration="7281000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AdidasStore$Test__products_tests_ProductsListViewTest_test_products_list.coverage" NAME="Test: products.tests.ProductsListViewTest.test_products_list Coverage Results" MODIFIED="1739519874020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserRegistrationTest.coverage" NAME="Test: users.tests.UserRegistrationTest Coverage Results" MODIFIED="1739775959594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserLoginTest_test_login_success.coverage" NAME="Test: users.tests.UserLoginTest.test_login_success Coverage Results" MODIFIED="1739784227845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserRegistrationTest_test_register.coverage" NAME="Test: users.tests.UserRegistrationTest.test_register Coverage Results" MODIFIED="1739574361774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/AdidasStore$Test__products_tests_ProductsListViewTest.coverage" NAME="Test: products.tests.ProductsListViewTest Coverage Results" MODIFIED="1739521080085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserLoginTest.coverage" NAME="Test: users.tests.UserLoginTest Coverage Results" MODIFIED="1739785568297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/AdidasStore$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1739785580748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserLoginTest_test_login.coverage" NAME="Test: users.tests.UserLoginTest.test_login Coverage Results" MODIFIED="1739781842160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserLoginTest_test_invalid_data.coverage" NAME="Test: users.tests.UserLoginTest.test_invalid_data Coverage Results" MODIFIED="1739784374392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/AdidasStore$Test__products_tests_ProductsListViewTest_test_products_list_categories.coverage" NAME="Test: products.tests.ProductsListViewTest.test_products_list_categories Coverage Results" MODIFIED="1739520983534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserRegistrationTest_test_register_post.coverage" NAME="Test: users.tests.UserRegistrationTest.test_register_post Coverage Results" MODIFIED="1739780337545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/AdidasStore$Test__products_tests_IndexViewTest_test_view.coverage" NAME="Test: products.tests.IndexViewTest.test_view Coverage Results" MODIFIED="1739517342724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

@@ -13,8 +13,6 @@ from users.forms import (User, UserLoginForm, UserProfileForm,
 from users.models import EmailVerification
 
 
-# Create your views here.
-
 class UserRegistrationView(SuccessMessageMixin, TitleMixin, CreateView):
     model = User
     form_class = UserRegistrationForm
