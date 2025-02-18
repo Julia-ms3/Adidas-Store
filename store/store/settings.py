@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
     'products',
     'users',
+    'orders',
 
 ]
 
@@ -101,7 +102,6 @@ CACHES = {
         }
     }
 }
-
 
 # DATABASE
 

@@ -1,10 +1,9 @@
-from users.tasks import send_verification_email
-
 from django import forms
 from django.contrib.auth.forms import (AuthenticationForm, UserChangeForm,
                                        UserCreationForm)
 
-from users.models import  User
+from users.models import User
+from users.tasks import send_verification_email
 
 
 class UserLoginForm(AuthenticationForm):
