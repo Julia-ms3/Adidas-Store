@@ -1,6 +1,7 @@
 from django.db import models
+
 from users.models import User
-from enum import Enum
+
 
 class Order(models.Model):
     CREATED = 1
@@ -11,7 +12,7 @@ class Order(models.Model):
         (CREATED, 'Created'),
         (ON_WAY, 'On Way'),
         (COMPLETED, 'Completed'),
-    ) # can change on Enum
+    )  # can change on Enum
 
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
