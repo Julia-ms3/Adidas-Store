@@ -1,13 +1,15 @@
 from http import HTTPStatus
-from django.http import HttpResponseRedirect
-from django.urls import reverse_lazy
+
+import stripe
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse, reverse_lazy
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView
-import stripe
-from store.settings import STRIPE_SECRET_KEY, MAIN_PATH
+
 from mixins.views import TitleMixin
 from orders.forms import OrderForm
-from django.urls import reverse
+from store.settings import MAIN_PATH, STRIPE_SECRET_KEY, STRIPE_SECRET_WEBHOOK
 
 stripe.api_key = STRIPE_SECRET_KEY
 
@@ -42,6 +44,7 @@ class CreateOrderView(TitleMixin, CreateView):
                     'quantity': 1,
                 },
             ],
+
             mode='payment',
             success_url=MAIN_PATH + reverse('orders:order_success'),
             cancel_url=MAIN_PATH + reverse('orders:order_canceled'),
@@ -51,3 +54,31 @@ class CreateOrderView(TitleMixin, CreateView):
     def form_valid(self, form):
         form.instance.order_creator = self.request.user
         return super(CreateOrderView, self).form_valid(form)
+
+
+@csrf_exempt
+def stripe_webhook_view(request):
+    payload = request.body
+    sig_header = request.META['HTTP_STRIPE_SIGNATURE']
+    event = None
+
+    try:
+        event = stripe.Webhook.construct_event(
+            payload, sig_header, STRIPE_SECRET_WEBHOOK
+        )
+    except ValueError as e:
+        # Invalid payload
+        return HttpResponse(status=400)
+    except stripe.error.SignatureVerificationError as e:
+        # Invalid signature
+        return HttpResponse(status=400)
+
+    if (
+            event['type'] == 'checkout.session.completed'
+            or event['type'] == 'checkout.session.async_payment_succeeded'
+    ):
+        fulfill_checkout(event['data']['object']['id'])
+
+
+def fulfill_checkout(session_id):
+    print("Fulfilling Checkout Session", session_id)
