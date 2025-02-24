@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21095d70-6dd7-4598-952d-9400b6a71024" name="Changes" comment="draft">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/store/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/store/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/store/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/store/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/orders/templates/orders/order_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/orders/templates/orders/order_create.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,45 +37,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django tests.Test: products.tests.IndexViewTest.test_view.executor": "Debug",
-    "Django tests.Test: products.tests.ProductsListViewTest.executor": "Debug",
-    "Django tests.Test: products.tests.ProductsListViewTest.test_products_list.executor": "Run",
-    "Django tests.Test: products.tests.ProductsListViewTest.test_products_list_categories.executor": "Run",
-    "Django tests.Test: users.tests.UserLoginTest.executor": "Run",
-    "Django tests.Test: users.tests.UserLoginTest.test_invalid_data.executor": "Run",
-    "Django tests.Test: users.tests.UserLoginTest.test_login.executor": "Run",
-    "Django tests.Test: users.tests.UserLoginTest.test_login_success.executor": "Run",
-    "Django tests.Test: users.tests.UserRegistrationTest.executor": "Run",
-    "Django tests.Test: users.tests.UserRegistrationTest.test_register.executor": "Run",
-    "Django tests.Test: users.tests.UserRegistrationTest.test_register_post.executor": "Run",
-    "Python tests.Python tests for tests.IndexViewTest.executor": "Run",
-    "Python tests.Python tests for tests.IndexViewTest.test_view.executor": "Run",
-    "Python tests.Python tests for tests.ProductsListViewTest.executor": "Debug",
-    "Python tests.Python tests for tests.ProductsListViewTest.test_products_list.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.manage.executor": "Debug",
-    "Python.run_server.executor": "Debug",
-    "Python.runserver.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/juliamatviychuk/Documents/python/AdidasStore",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.python.django.customization.DjangoModulesConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django tests.Test: products.tests.IndexViewTest.test_view.executor&quot;: &quot;Debug&quot;,
+    &quot;Django tests.Test: products.tests.ProductsListViewTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Django tests.Test: products.tests.ProductsListViewTest.test_products_list.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: products.tests.ProductsListViewTest.test_products_list_categories.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: users.tests.UserLoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: users.tests.UserLoginTest.test_invalid_data.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: users.tests.UserLoginTest.test_login.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: users.tests.UserLoginTest.test_login_success.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: users.tests.UserRegistrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: users.tests.UserRegistrationTest.test_register.executor&quot;: &quot;Run&quot;,
+    &quot;Django tests.Test: users.tests.UserRegistrationTest.test_register_post.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.IndexViewTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.IndexViewTest.test_view.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.ProductsListViewTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Python tests.Python tests for tests.ProductsListViewTest.test_products_list.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.manage.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.run_server.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.runserver.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/juliamatviychuk/Documents/python/AdidasStore&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.python.django.customization.DjangoModulesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/store/orders/templates/orders" />
       <recent name="$PROJECT_DIR$/store/products/fixtures" />
     </key>
   </component>
@@ -279,6 +275,7 @@
       <workItem from="1739715732476" duration="352000" />
       <workItem from="1739726631059" duration="1360000" />
       <workItem from="1739774991033" duration="13655000" />
+      <workItem from="1739863116139" duration="16166000" />
     </task>
     <servers />
   </component>
@@ -288,6 +285,17 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/store/orders/migrations/0001_initial.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AdidasStore$Test__products_tests_ProductsListViewTest_test_products_list.coverage" NAME="Test: products.tests.ProductsListViewTest.test_products_list Coverage Results" MODIFIED="1739519874020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserRegistrationTest.coverage" NAME="Test: users.tests.UserRegistrationTest Coverage Results" MODIFIED="1739775959594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -295,7 +303,7 @@
     <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserRegistrationTest_test_register.coverage" NAME="Test: users.tests.UserRegistrationTest.test_register Coverage Results" MODIFIED="1739574361774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/AdidasStore$Test__products_tests_ProductsListViewTest.coverage" NAME="Test: products.tests.ProductsListViewTest Coverage Results" MODIFIED="1739521080085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserLoginTest.coverage" NAME="Test: users.tests.UserLoginTest Coverage Results" MODIFIED="1739785568297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/AdidasStore$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1739830210937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/AdidasStore$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1739891365546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserLoginTest_test_login.coverage" NAME="Test: users.tests.UserLoginTest.test_login Coverage Results" MODIFIED="1739781842160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserLoginTest_test_invalid_data.coverage" NAME="Test: users.tests.UserLoginTest.test_invalid_data Coverage Results" MODIFIED="1739784374392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/AdidasStore$Test__products_tests_ProductsListViewTest_test_products_list_categories.coverage" NAME="Test: products.tests.ProductsListViewTest.test_products_list_categories Coverage Results" MODIFIED="1739520983534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

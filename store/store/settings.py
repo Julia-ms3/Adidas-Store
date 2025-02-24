@@ -144,7 +144,7 @@ USE_I18N = True
 
 USE_TZ = True
 # root URL
-MAIN_PATH = 'http://127.0.0.1:8000/'  # or localhost:8000
+MAIN_PATH = 'http://127.0.0.1:8000'  # or localhost:8000
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
@@ -192,3 +192,7 @@ SOCIALACCOUNT_PROVIDERS = {
 # CELERY
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
+
+# STRIPE
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
