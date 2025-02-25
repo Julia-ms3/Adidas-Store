@@ -1,6 +1,10 @@
+import stripe
 from django.db import models
 
+from store.settings import STRIPE_SECRET_KEY
 from users.models import User
+
+stripe.api_key = STRIPE_SECRET_KEY
 
 
 # Create your models here.
@@ -15,6 +19,7 @@ class Category(models.Model):
 class Product(models.Model):
     name = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=0)
+    stripe_price_id = models.CharField(max_length=30, null=True, blank=True)
     quantity = models.PositiveIntegerField(default=0)
     description = models.TextField()
     img = models.ImageField(upload_to='product_images')
@@ -22,6 +27,19 @@ class Product(models.Model):
 
     def __str__(self):
         return f'Product name: {self.name} ~ Category:  {self.category}'
+
+    def save(self, *args, force_insert=False, force_update=False, using=None, update_fields=None):
+        if not self.stripe_price_id:
+            stripe_product_price = self.create_stripe_product()
+            self.stripe_price_id = stripe_product_price['id']
+        super(Product, self).save(force_insert=False, force_update=False, using=None, update_fields=None)
+
+    def create_stripe_product(self):
+        stripe_product = stripe.Product.create(name=self.name)
+        print(stripe_product)
+        stripe_price = stripe.Price.create(product=stripe_product['id'], unit_amount=self.price * 100, currency="usd")
+        print(stripe_price)
+        return stripe_price
 
 
 class BasketQuerySet(models.QuerySet):

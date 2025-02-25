@@ -6,6 +6,7 @@ from django.utils.timezone import now
 
 from store.settings import EMAIL_HOST_USER, MAIN_PATH
 
+
 # Create your models here.
 
 class User(AbstractUser):

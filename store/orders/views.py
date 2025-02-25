@@ -9,6 +9,7 @@ from django.views.generic.edit import CreateView
 
 from mixins.views import TitleMixin
 from orders.forms import OrderForm
+from products.models import Basket
 from store.settings import MAIN_PATH, STRIPE_SECRET_KEY, STRIPE_SECRET_WEBHOOK
 
 stripe.api_key = STRIPE_SECRET_KEY
@@ -37,17 +38,22 @@ class CreateOrderView(TitleMixin, CreateView):
 
     def post(self, request, *args, **kwargs):
         super(CreateOrderView, self).post(request, *args, **kwargs)
+        baskets = Basket.objects.filter(user=self.request.user)
+        line_items = []
+        for basket in baskets:
+            item = {
+                'price': basket.product.stripe_price_id,
+                'quantity': basket.quantity
+            }
+            line_items.append(item)
+
         checkout_session = stripe.checkout.Session.create(
-            line_items=[
-                {
-                    'price': 'price_1QvxO14f7pACW7PgiNHQpdPE',
-                    'quantity': 1,
-                },
-            ],
+            line_items=line_items,
 
             mode='payment',
             success_url=MAIN_PATH + reverse('orders:order_success'),
             cancel_url=MAIN_PATH + reverse('orders:order_canceled'),
+
         )
         return HttpResponseRedirect(checkout_session.url, status=HTTPStatus.SEE_OTHER)
 
@@ -66,10 +72,10 @@ def stripe_webhook_view(request):
         event = stripe.Webhook.construct_event(
             payload, sig_header, STRIPE_SECRET_WEBHOOK
         )
-    except ValueError as e:
+    except ValueError:
         # Invalid payload
         return HttpResponse(status=400)
-    except stripe.error.SignatureVerificationError as e:
+    except stripe.error.SignatureVerificationError:
         # Invalid signature
         return HttpResponse(status=400)
 
@@ -78,6 +84,8 @@ def stripe_webhook_view(request):
             or event['type'] == 'checkout.session.async_payment_succeeded'
     ):
         fulfill_checkout(event['data']['object']['id'])
+
+    return HttpResponse(status=200)
 
 
 def fulfill_checkout(session_id):
