@@ -63,3 +63,14 @@ class Basket(models.Model):
 
     def sum(self):
         return self.product.price * self.quantity
+
+    def de_json(self):
+        print('call this func')
+        basket_items = {
+            'product_name' : self.product.name,
+            'price' : int(self.product.price),
+            'quantity': self.quantity,
+            'current_sum': int(self.sum())
+        }
+        print('BASKET items: ', basket_items)
+        return basket_items
