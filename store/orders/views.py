@@ -7,6 +7,7 @@ from django.urls import reverse, reverse_lazy
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView
+from django.views.generic.list import ListView
 
 from mixins.views import TitleMixin
 from orders.forms import OrderForm
@@ -17,9 +18,15 @@ from store.settings import MAIN_PATH, STRIPE_SECRET_KEY, STRIPE_SECRET_WEBHOOK
 stripe.api_key = STRIPE_SECRET_KEY
 
 
-class OrdersView(TitleMixin, TemplateView):
-    template_name = 'orders/orders.html'
+class OrdersListView(TitleMixin, ListView):
     title = 'Orders'
+    template_name = 'orders/orders.html'
+    model = Order
+    ordering = ('-created_time')
+
+    def get_queryset(self):
+        queryset = super(OrdersListView, self).get_queryset()
+        return queryset.filter(order_creator=self.request.user)
 
 
 class SuccessView(TitleMixin, TemplateView):
