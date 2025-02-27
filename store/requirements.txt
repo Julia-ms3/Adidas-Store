@@ -12,6 +12,7 @@ Django==5.1.4
 django-allauth==65.4.1
 django-debug-toolbar==5.0.1
 django-environ==0.12.0
+django-extensions==3.2.3
 django-humanize==0.1.2
 django-redis==5.4.0
 flake8==7.1.1
