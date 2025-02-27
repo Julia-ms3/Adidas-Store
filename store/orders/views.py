@@ -1,5 +1,4 @@
 from http import HTTPStatus
-from importlib.metadata import metadata
 
 import stripe
 from django.http import HttpResponse, HttpResponseRedirect
@@ -8,6 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView
 from django.views.generic.list import ListView
+from django.views.generic import DetailView
 
 from mixins.views import TitleMixin
 from orders.forms import OrderForm
@@ -27,6 +27,12 @@ class OrdersListView(TitleMixin, ListView):
     def get_queryset(self):
         queryset = super(OrdersListView, self).get_queryset()
         return queryset.filter(order_creator=self.request.user)
+
+
+class OrderDetailView(TitleMixin, DetailView):
+    title = 'Order detail'
+    template_name = 'orders/order.html'
+    model = Order
 
 
 class SuccessView(TitleMixin, TemplateView):

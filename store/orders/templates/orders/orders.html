@@ -30,7 +30,7 @@
                             <td>{{ order.created_time | naturaltime}}</td>
                             <td>{{ order.basket_history.total_sum }} $ </td>
                             <td>
-                                <a href="order.html">see</a>
+                                <a href="{% url 'orders:order_detail' order.id %}">see</a>
                             </td>
                         </tr>
                         {% endfor %}

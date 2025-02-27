@@ -67,8 +67,8 @@ class Basket(models.Model):
     def de_json(self):
         print('call this func')
         basket_items = {
-            'product_name' : self.product.name,
-            'price' : int(self.product.price),
+            'product_name': self.product.name,
+            'price': int(self.product.price),
             'quantity': self.quantity,
             'current_sum': int(self.sum())
         }

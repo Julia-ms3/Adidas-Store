@@ -33,8 +33,8 @@ class Order(models.Model):
         print(baskets)
         self.status = self.ON_WAY
         self.basket_history = {
-            'history_items' : [basket.de_json() for basket in baskets],
-            'total_sum' : int(baskets.total_sum())
+            'history_items': [basket.de_json() for basket in baskets],
+            'total_sum': int(baskets.total_sum())
         }
 
         print(self.basket_history)
