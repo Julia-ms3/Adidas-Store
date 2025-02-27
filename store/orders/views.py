@@ -13,9 +13,10 @@ from mixins.views import TitleMixin
 from orders.forms import OrderForm
 from orders.models import Order
 from products.models import Basket
-from store.settings import MAIN_PATH, STRIPE_SECRET_KEY, STRIPE_SECRET_WEBHOOK
+from django.conf import settings
+# from store.settings import DOMAIN_NAME, STRIPE_SECRET_KEY, STRIPE_SECRET_WEBHOOK
 
-stripe.api_key = STRIPE_SECRET_KEY
+stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
 class OrdersListView(TitleMixin, ListView):
@@ -67,8 +68,8 @@ class CreateOrderView(TitleMixin, CreateView):
             line_items=line_items,
 
             mode='payment',
-            success_url=MAIN_PATH + reverse('orders:order_success'),
-            cancel_url=MAIN_PATH + reverse('orders:order_canceled'),
+            success_url=settings.DOMAIN_NAME + reverse('orders:order_success'),
+            cancel_url=settings.DOMAIN_NAME + reverse('orders:order_canceled'),
             metadata={'order_id': self.object.id}
 
         )
@@ -87,7 +88,7 @@ def stripe_webhook_view(request):
 
     try:
         event = stripe.Webhook.construct_event(
-            payload, sig_header, STRIPE_SECRET_WEBHOOK
+            payload, sig_header, settings.STRIPE_SECRET_WEBHOOK
         )
     except ValueError as e:
         print(f"Invalid payload: {e}")

@@ -1,10 +1,10 @@
 import stripe
 from django.db import models
 
-from store.settings import STRIPE_SECRET_KEY
+from django.conf import settings
 from users.models import User
 
-stripe.api_key = STRIPE_SECRET_KEY
+stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
 # Create your models here.

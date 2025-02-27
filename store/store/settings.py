@@ -11,23 +11,48 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 import os
+from email.quoprimime import body_length
 from pathlib import Path
-
-from dotenv import load_dotenv
-
-load_dotenv()
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+environ.Env.read_env(BASE_DIR / '.env')
+
+# EVN
+env = environ.Env(
+    DEBUG=(bool),
+    DOMAIN_NAME=(str),
+
+    EMAIL_HOST=(str),
+    EMAIL_PORT=(int),
+    EMAIL_HOST_USER=(str),
+    EMAIL_HOST_PASSWORD=(str),
+
+    DATABASE_NAME=(str),
+    DATABASE_USER=(str),
+    DATABASE_PASSWORD=(str),
+    DATABASE_HOST=(str),
+    DATABASE_PORT=(str),
+
+    SECRET_KEY=(str),
+
+    STRIPE_PUBLIC_KEY=(str),
+    STRIPE_SECRET_KEY=(str),
+    STRIPE_SECRET_WEBHOOK=(str),
+
+    REDIS_HOST=(str),
+    REDIS_PORT=(str)
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env('DEBUG')
 
 # Application definition
 
@@ -94,10 +119,15 @@ INTERNAL_IPS = [
     '127.0.0.1',
     'localhost'
 ]
+# REDIS
+REDIS_HOST = env('REDIS_HOST')
+REDIS_PORT = env('REDIS_PORT')
+
+# CACHES
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379/1',
+        'LOCATION': f'redis://{REDIS_HOST}:{REDIS_PORT}/1',
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         }
@@ -109,11 +139,11 @@ CACHES = {
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "adidas_store",
-        "USER": os.getenv('USER_DB'),
-        "PASSWORD": os.getenv('PASSWORD_DB'),
-        "HOST": "127.0.0.1",
-        "PORT": "5432",
+        "NAME": env('DATABASE_NAME'),
+        "USER": env('DATABASE_USER'),
+        "PASSWORD": env('DATABASE_PASSWORD'),
+        "HOST": env('DATABASE_HOST'),
+        "PORT": env('DATABASE_PORT'),
     }
 }
 # Password validation
@@ -145,7 +175,7 @@ USE_I18N = True
 
 USE_TZ = True
 # root URL
-MAIN_PATH = 'http://127.0.0.1:8000'  # or localhost:8000
+DOMAIN_NAME = env('DOMAIN_NAME')  # or localhost:8000
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
@@ -168,12 +198,16 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 # EMAIL
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = os.getenv('EMAIL_HOST')
-EMAIL_PORT = os.getenv('EMAIL_PORT')
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = True
+
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  #
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = env('EMAIL_HOST')
+    EMAIL_PORT = env('EMAIL_PORT')
+    EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+    EMAIL_USE_TLS = True
 
 # OAuth
 
@@ -191,10 +225,10 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 # CELERY
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
-CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
+CELERY_BROKER_URL = F'redis://{REDIS_HOST}:{REDIS_PORT}'
+CELERY_RESULT_BACKEND = F'redis://{REDIS_HOST}:{REDIS_PORT}'
 
 # STRIPE
-STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY')
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
-STRIPE_SECRET_WEBHOOK = os.getenv('STRIPE_SECRET_WEBHOOK')
+STRIPE_PUBLIC_KEY = env('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY = env('STRIPE_SECRET_KEY')
+STRIPE_SECRET_WEBHOOK = env('STRIPE_SECRET_WEBHOOK')

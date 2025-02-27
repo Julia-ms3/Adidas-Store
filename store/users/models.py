@@ -4,7 +4,7 @@ from django.db import models
 from django.urls import reverse
 from django.utils.timezone import now
 
-from store.settings import EMAIL_HOST_USER, MAIN_PATH
+from django.conf import settings
 
 
 # Create your models here.
@@ -25,7 +25,7 @@ class EmailVerification(models.Model):
 
     def send_email_message(self):
         link = reverse('users:verification', kwargs={'email': self.user.email, 'code': self.code})
-        verification_link = f'{MAIN_PATH}{link}'
+        verification_link = f'{settings.DOMAIN_NAME}{link}'
         formatted_expiration = self.expiration.strftime("%H:%M %d-%m-%Y")
         subject = f'Confirm Your Account Authorization, {self.user}'  # try with username
         message = f'''To confirm your authorization, please click the link below:
@@ -37,7 +37,7 @@ The link is valid for {formatted_expiration}
 
         send_mail(subject=subject,
                   message=message,
-                  from_email=EMAIL_HOST_USER,
+                  from_email=settings.EMAIL_HOST_USER,
                   recipient_list=[self.user.email]
                   )
 
