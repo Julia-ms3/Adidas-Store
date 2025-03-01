@@ -184,6 +184,7 @@ DOMAIN_NAME = env('DOMAIN_NAME')  # or localhost:8000
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
