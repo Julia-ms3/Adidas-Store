@@ -1,19 +1,20 @@
 from http import HTTPStatus
 
 import stripe
+from django.conf import settings
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from django.views.decorators.csrf import csrf_exempt
+from django.views.generic import DetailView
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView
 from django.views.generic.list import ListView
-from django.views.generic import DetailView
 
 from mixins.views import TitleMixin
 from orders.forms import OrderForm
 from orders.models import Order
 from products.models import Basket
-from django.conf import settings
+
 # from store.settings import DOMAIN_NAME, STRIPE_SECRET_KEY, STRIPE_SECRET_WEBHOOK
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
