@@ -46,7 +46,6 @@ env = environ.Env(
     DATABASE_URL=str,
 )
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -122,6 +121,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'store.wsgi.application'
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'adidas-store.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://adidas-store.onrender.com']
 INTERNAL_IPS = [
     '127.0.0.1',
     'localhost'
@@ -220,7 +221,7 @@ LOGOUT_REDIRECT_URL = '/'
 # EMAIL
 
 if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  #
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST = env('EMAIL_HOST')

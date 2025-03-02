@@ -19,11 +19,13 @@ django-extensions==3.2.3
 django-humanize==0.1.2
 django-redis==5.4.0
 flake8==7.1.1
+gunicorn==23.0.0
 humanize==4.12.1
 idna==3.10
 isort==6.0.0
 kombu==5.4.2
 mccabe==0.7.0
+packaging==24.2
 pillow==11.1.0
 prompt_toolkit==3.0.50
 psycopg2==2.9.10
