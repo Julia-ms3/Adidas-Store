@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21095d70-6dd7-4598-952d-9400b6a71024" name="Changes" comment="draft">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/products/templates/products/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/templates/products/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/products/templates/products/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/templates/products/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/products/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/static/vendor/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/store/static/vendor/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/static/vendor/css/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/store/static/vendor/css/products.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/static/vendor/img/slides/slide-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/static/vendor/img/slides/slide-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/static/vendor/img/slides/slide-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/static/vendor/img/wallpaper.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/store/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/store/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/store/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -300,6 +291,7 @@
       <workItem from="1740800726264" duration="44000" />
       <workItem from="1740801081017" duration="3363000" />
       <workItem from="1740810183122" duration="6605000" />
+      <workItem from="1740825609102" duration="5589000" />
     </task>
     <servers />
   </component>
@@ -338,7 +330,7 @@
     <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserRegistrationTest_test_register.coverage" NAME="Test: users.tests.UserRegistrationTest.test_register Coverage Results" MODIFIED="1739574361774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/AdidasStore$Test__products_tests_ProductsListViewTest.coverage" NAME="Test: products.tests.ProductsListViewTest Coverage Results" MODIFIED="1739521080085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserLoginTest.coverage" NAME="Test: users.tests.UserLoginTest Coverage Results" MODIFIED="1739785568297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/AdidasStore$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1740823964755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/AdidasStore$runserver.coverage" NAME="runserver Coverage Results" MODIFIED="1740833915450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserLoginTest_test_login.coverage" NAME="Test: users.tests.UserLoginTest.test_login Coverage Results" MODIFIED="1739781842160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/AdidasStore$Test__users_tests_UserLoginTest_test_invalid_data.coverage" NAME="Test: users.tests.UserLoginTest.test_invalid_data Coverage Results" MODIFIED="1739784374392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/AdidasStore$Test__products_tests_ProductsListViewTest_test_products_list_categories.coverage" NAME="Test: products.tests.ProductsListViewTest.test_products_list_categories Coverage Results" MODIFIED="1739520983534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

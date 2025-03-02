@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-
+import dj_database_url
 import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,31 +20,32 @@ environ.Env.read_env(BASE_DIR / '.env')
 
 # EVN
 env = environ.Env(
-    DEBUG=(bool),
-    DOMAIN_NAME=(str),
+    DEBUG=bool,
+    DOMAIN_NAME=str,
 
-    EMAIL_HOST=(str),
-    EMAIL_PORT=(int),
-    EMAIL_HOST_USER=(str),
-    EMAIL_HOST_PASSWORD=(str),
+    EMAIL_HOST=str,
+    EMAIL_PORT=int,
+    EMAIL_HOST_USER=str,
+    EMAIL_HOST_PASSWORD=str,
 
-    DATABASE_NAME=(str),
-    DATABASE_USER=(str),
-    DATABASE_PASSWORD=(str),
-    DATABASE_HOST=(str),
-    DATABASE_PORT=(str),
+    DATABASE_NAME=str,
+    DATABASE_USER=str,
+    DATABASE_PASSWORD=str,
+    DATABASE_HOST=str,
+    DATABASE_PORT=str,
 
-    SECRET_KEY=(str),
+    SECRET_KEY=str,
 
-    STRIPE_PUBLIC_KEY=(str),
-    STRIPE_SECRET_KEY=(str),
-    STRIPE_SECRET_WEBHOOK=(str),
+    STRIPE_PUBLIC_KEY=str,
+    STRIPE_SECRET_KEY=str,
+    STRIPE_SECRET_WEBHOOK=str,
 
-    REDIS_HOST=(str),
-    REDIS_PORT=(str),
-    CLOUDINARY_URL=(str),
-
+    REDIS_HOST=str,
+    REDIS_PORT=str,
+    CLOUDINARY_URL=str,
+    DATABASE_URL=str,
 )
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -141,17 +142,22 @@ CACHES = {
 }
 
 # DATABASE
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": env('DATABASE_NAME'),
-        "USER": env('DATABASE_USER'),
-        "PASSWORD": env('DATABASE_PASSWORD'),
-        "HOST": env('DATABASE_HOST'),
-        "PORT": env('DATABASE_PORT'),
+if DEBUG:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql_psycopg2",
+            "NAME": env('DATABASE_NAME'),
+            "USER": env('DATABASE_USER'),
+            "PASSWORD": env('DATABASE_PASSWORD'),
+            "HOST": env('DATABASE_HOST'),
+            "PORT": env('DATABASE_PORT'),
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(env('DATABASE_URL'))
+    }
+
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
