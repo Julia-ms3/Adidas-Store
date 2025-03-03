@@ -121,6 +121,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'store.wsgi.application'
+
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'adidas-store.onrender.com']
 CSRF_TRUSTED_ORIGINS = ['https://adidas-store.onrender.com']
 INTERNAL_IPS = [
