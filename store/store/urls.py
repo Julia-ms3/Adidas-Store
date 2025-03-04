@@ -30,7 +30,8 @@ urlpatterns = [
     path('user/', include('users.urls', namespace='users')),
     path('orders/', include('orders.urls', namespace='orders')),
     path('accounts/', include('allauth.urls')),
-    path('webhook/stripe', stripe_webhook_view, name='stripe_webhook')
+    path('webhook/stripe', stripe_webhook_view, name='stripe_webhook'),
+    path('api/', include('api.urls', namespace='api'))
 
 ]
 
