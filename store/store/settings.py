@@ -80,6 +80,8 @@ INSTALLED_APPS = [
     'products',
     'users',
     'orders',
+    'api',
+    'rest_framework',
 
 ]
 
