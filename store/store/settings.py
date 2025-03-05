@@ -83,6 +83,7 @@ INSTALLED_APPS = [
     'orders',
     'api',
     'rest_framework',
+    'rest_framework.authtoken',
 
 ]
 
@@ -262,4 +263,11 @@ STRIPE_SECRET_WEBHOOK = env('STRIPE_SECRET_WEBHOOK')
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 3,
+
+
+
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+
 }

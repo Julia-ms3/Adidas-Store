@@ -22,6 +22,7 @@ from django.urls import include, path
 
 from orders.views import stripe_webhook_view
 from products.views import IndexView
+from rest_framework.authtoken import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,7 +32,8 @@ urlpatterns = [
     path('orders/', include('orders.urls', namespace='orders')),
     path('accounts/', include('allauth.urls')),
     path('webhook/stripe', stripe_webhook_view, name='stripe_webhook'),
-    path('api/', include('api.urls', namespace='api'))
+    path('api/', include('api.urls', namespace='api')),
+    path('api-token-auth/', views.obtain_auth_token)
 
 ]
 
