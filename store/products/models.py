@@ -22,7 +22,7 @@ class Product(models.Model):
     stripe_price_id = models.CharField(max_length=30, null=True, blank=True)
     quantity = models.PositiveIntegerField(default=0)
     description = models.TextField()
-    img = models.ImageField(upload_to='product_images')
+    img = models.ImageField(upload_to='product_images', null=True, blank=True)
     category = models.ForeignKey(to=Category, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
