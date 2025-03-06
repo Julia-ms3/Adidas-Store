@@ -13,4 +13,3 @@ urlpatterns = [
     path('order_canceled/', CancelView.as_view(), name='order_canceled'),
 
 ]
-
